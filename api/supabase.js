@@ -1,10 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const { createClient } = require("@supabase/supabase-js");
-const bodyParser = require("body-parser");
 
 const router = express.Router();
-app.use(bodyParser.json());
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;

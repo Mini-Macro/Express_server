@@ -2,10 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const qs = require("qs");
-const bodyParser = require("body-parser");
 
 const router = express.Router();
-app.use(bodyParser.json());
 
 router.get("/checking-powerbi-router", async (req, res) => {
   res.json({ message: "PowerBI router is working" });
