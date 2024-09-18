@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const powerbiRoutes = require("./routes/powerbi");
-const supabaseRoutes = require("./routes/supabase");
+const powerbiRoutes = require("./api/powerbi");
+const supabaseRoutes = require("./api/supabase");
 
 const app = express();
 const port = process.env.PORT || 5000;

@@ -1,1 +1,7 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "version": 2,
+  "routes": [
+    { "src": "/powerbi", "dest": "/api/powerbi.js" },
+    { "src": "/supabase", "dest": "/api/supabase.js" }
+  ]
+}
