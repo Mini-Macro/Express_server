@@ -35,7 +35,7 @@ router.get("/tasks", async (req, res) => {
   }
 });
 
-// Get assignee tasks (get tasks that are only assigned to the user)
+// Get assigned and created tasks (get tasks that are assigned to the user and created by user)
 router.get("/tasks/:user", async (req, res) => {
   try {
     const { user } = req.params;
@@ -103,6 +103,7 @@ router.post("/tasks", async (req, res) => {
     accountantEmail,
     platform,
     createdBy,
+    deadline,
   } = req.body;
   try {
     let taskData = {
@@ -113,6 +114,7 @@ router.post("/tasks", async (req, res) => {
       clientEmail,
       accountantEmail,
       createdBy,
+      deadline,
     };
 
     // Add email to appropriate column based on platform
@@ -220,6 +222,7 @@ router.put("/tasks/:id", async (req, res) => {
     clientEmail,
     accountantEmail,
     platform,
+    deadline,
     userEmail, // Add this to know who is trying to edit
   } = req.body;
   try {
@@ -246,6 +249,7 @@ router.put("/tasks/:id", async (req, res) => {
       description,
       assignee,
       status,
+      deadline,
     };
 
     // Update email in appropriate column based on platform
